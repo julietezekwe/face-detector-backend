@@ -39,4 +39,4 @@ app.get('/profile/:id', (req, res) => {HandleProfileGet(req, res)});
 app.put('/image', (req, res) => {HandleImage(req, res)});
 
 
-app.listen(3002);
+app.listen(process.env.PORT || 3002);
