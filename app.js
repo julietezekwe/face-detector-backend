@@ -23,7 +23,12 @@ app.use(cors());
 
 
 app.get('/', (req, res) =>{
-   res.send("its working")
+    let query = {
+        text: 'SELECT * FROM users',
+    }
+    pool.query(query).then(data => {
+      res.json(data.rows);
+    }).catch(err => res.json(err));
 });
 app.post('/signin', (req, res) => {HandleSignin(req, res, bcrypt)});
 
