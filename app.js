@@ -32,7 +32,7 @@ app.get('/', (req, res) =>{
 });
 app.post('/signin', (req, res) => {HandleSignin(req, res, bcrypt)});
 
-app.post('/register', (req, res) => {HandleRegister(req, res. bcrypt)});
+app.post('/register', (req, res) => {HandleRegister(req, res, bcrypt)});
 
 app.get('/profile/:id', (req, res) => {HandleProfileGet(req, res)});
 

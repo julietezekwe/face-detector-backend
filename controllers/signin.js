@@ -1,6 +1,7 @@
 import pool from '../db/config';
 
 const HandleSignin = (req, res, bcrypt) => {
+    
     const { email, password } = req.body; 
     let query = {
         text: 'SELECT * FROM users WHERE email = $1',
